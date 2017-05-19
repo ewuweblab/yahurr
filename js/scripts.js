@@ -43,6 +43,7 @@ var showStudents = function(record) {
        <div class="content">
            <h3>${record.fields.Name}</h3>
            <p class="description">
+               ${record.fields.Bio}
                <a href=" ${record.fields.GitHub} ">GitHub</a> and <a href="mailto:${record.fields.Email}">Email</a>
            </p>
        </div>
