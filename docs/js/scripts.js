@@ -10460,7 +10460,9 @@ var showStudents = function(record) {
            <h3>${record.fields.Name}</h3>
            <p class="description">
                ${record.fields.Bio}
-               <a href=" ${record.fields.GitHub} ">GitHub</a> and <a href="mailto:${record.fields.Email}">Email</a>
+           </p>
+           <p class="description">
+              <a href=" ${record.fields.GitHub} ">GitHub</a> and <a href="mailto:${record.fields.Email}">Email</a>
            </p>
        </div>
     </section>
