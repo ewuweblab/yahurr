@@ -10432,35 +10432,45 @@ console.log(base);
 base('YaHURR').select({
     view: 'Grid view'
 }).firstPage(function(err, records) {
+    
     if (err) { console.error(err); return; }
+
     records.forEach(function(record) {
-        
-        // console.log('Retrieved', record.get('Name'));
-        var students = `<h1>${record.get('Name')}</h1>`
-        console.log(students);
-        
-        // Display
-        $('body').html(students);
-        
+       
+      // Check-Check 
+      // console.log('Retrieved', record.get('Name'));
+      // console.log( record.fields.Avatar[0].url ); 
+
+      // Display Data
+      showStudents(record)
+
     });
 });
 
-
-
 // Template Literal
-var students = `
-    <section class="ui card">
+var showStudents = function(record) {
+
+  var template = 
+  `
+    <section class="ui raised card">
         <div class="image">
-           <img src="http://placehold.it/400x300" alt="">
+           <img src=" ${record.fields.Avatar[0].url} " alt="">
         </div>
        <div class="content">
-           <h3>First Last</h3>
+           <h3>${record.fields.Name}</h3>
            <p class="description">
-               <a href="">GitHub</a> and <a href="mailto:">Email</a>
+               <a href=" ${record.fields.GitHub} ">GitHub</a> and <a href="mailto:${record.fields.Email}">Email</a>
            </p>
        </div>
     </section>
-`;
+  `;
+
+  // Display Collected Data
+  $('#students').append(template);
+
+}
+
+
 
 
 

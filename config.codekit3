@@ -201,7 +201,7 @@
 	"\/js\/airtable.js": {
 		"ft": 64,
 		"mi": 0,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/docs\/js\/airtable.js",
 		"oF": 0,
 		"sC": 0,
@@ -252,7 +252,7 @@
 	"displayValue": "yahurr",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-dunnoGirl",
-	"lastBuiltDate": 516842055
+	"lastBuiltDate": 516860215
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
